@@ -1,15 +1,15 @@
 /* Global Layout Set-up */
-* { 
+* {
   box-sizing: border-box;
 }
-  
+
 body {
   margin: 0;
   padding: 0;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   color: #222;
-  background: #f7f5f0;
+  background: #4A6F8A;
 }
 /* Link Styles */
 
@@ -25,7 +25,7 @@ a:hover {
 
 .main-nav {
   width: 100%;
-  background: black;
+  background-color: #133853;
   min-height: 30px;
   padding: 10px;
   position: fixed;
@@ -55,9 +55,13 @@ a:hover {
   color: white
 }
 
+.selected {
+  color: white;
+}
+
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url('../images/Rotterdam-Skyline.jpg') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -74,7 +78,8 @@ header .profile-image {
   transition: all .5s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2) rotate(720deg);
+  border: 2px dashed pink;
 }
 .tag {
   background-color: #efefef;
@@ -83,7 +88,7 @@ header .profile-image:hover {
   border-radius: 5px;
   display: table;
   margin: 10px auto;
-} 
+}
 .location {
   background-color: #222;
   color: yellow;
@@ -93,13 +98,28 @@ header .profile-image:hover {
   padding: 20px 40px 40px;
   max-width: 500px;
   text-align: left;
-  background: #fff;
+  background: #7391A6;
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
   transition: all .5s;
 }
-.card:hover {
-  border-color: #ff99ff;
+.card:hover, .card2:hover {
+  border-color: #ff0;
+}
+
+.card2 {
+  margin: 30px;
+  padding: 10px;
+  max-width: 500px;
+  text-align: left;
+  background: #7391A6;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s;
+}
+
+.card2 img {
+  max-width: 100%;
 }
 
 ul.skills {
@@ -152,13 +172,11 @@ a.social {
   transition: all .5s;
 }
 a.twitter {
-  background-image: url(images/twitter.svg);
+  background-image: url(../images/twitter.svg);
 }
-a.linkedin {
-  background-image: url(images/linkedin.svg);
-}
+
 a.github {
-  background-image: url(images/github.svg);
+  background-image: url(../images/github.svg);
 }
 a.social:hover {
   opacity: 1;
@@ -169,10 +187,10 @@ a.social:hover {
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
-  
+
   .flex {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex; 
+      display: flex;
       max-width: 1200px;
       -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -204,4 +222,3 @@ a.social:hover {
   }
 
 }
-
